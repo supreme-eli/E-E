@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Personal Website</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="saving.js" defer></script>
+    <script type="text/javascript" defer>
+     
+     google.charts.load('current', {'packages':['corechart']});
+     google.charts.setOnLoadCallback(drawChart);
+     
+     // Draw the chart and set the chart values
+     function drawChart() {
+       var data = google.visualization.arrayToDataTable([
+       ['Task', 'Hours per Day'],
+       ['money saved', savings],
+       ['food', food],
+ 
+       
+       ['bills', bills]
+     ]);
+     
+       // Optional; add a title and set the width and height of the chart
+       var options = {'title':'how much money can i save', 'width':550, 'height':400};
+     
+       // Display the chart inside the <div> element with id="piechart"
+       var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+       chart.draw(data, options);
+     }
+     </script>
+</head>
+   <body>
+        <div class="header">E&E Savings</div>
+        <main>
+             <ul>
+             <li><a class="active" href="index.html">Home</a></li>
+             <li><a href="saving.html">SAVINGS</a></li>
+             <li><a href="signin.html">SIGN IN</a></li>
+             <li><a href="signup.html">SIGN UP</a></li>
+             <li><a href="support.html">SUPPORT</a/li>
+  
+             </ul>
+         </main>
+
+        <div id="piechart"></div>
+
+      
+      <form class="vertical">
+            <div class="form-input">
+                <label>savings: </label>
+                <input id="savingname" type="text">
+            </div>
+            <div class="form-input">
+                <label>Amount: $</label>
+                <input id="savingAmount" type="text">
+            </div>
+            <button id="addBtn2">Add</button>
+        </form>
+         <div id="ledger"></div>
+         
+         <form class="vertical">
+                <div class="form-input">
+                    <label>food: </label>
+                    <input id="foodname" type="text">
+                </div>
+                <div class="form-input">
+                    <label>Amount: $</label>
+                    <input type="text" id ="foodAmount">
+                </div>
+                <button id="addBtn">Add</button>
+            </form>
+             <div id="food"></div>
+             <form class="vertical">
+                    <div class="form-input">
+                        <label>bill: </label>
+                        <input id="billname" type="text">
+                    </div>
+                    <div class="form-input">
+                        <label>Amount: $</label>
+                        <input id="billAmount" type="textsu">
+                    </div>
+                    <button id="addBtn3">Add</button>
+                </form>
+                 <div id="bills"></div>
+   </body>
+</html>

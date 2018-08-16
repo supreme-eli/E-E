@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="style2.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <title>fireMessage</title>
+
+   <!--Go to https://console.firebase.google.com-->
+   <!--Sign in and add a project "fireMessage"-->
+   <!--PASTE SNIPPET HERE-->
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+ // Initialize Firebase
+ var config = {
+   apiKey: "AIzaSyDi1YJtrGPgkbBbYKxW-EhdrO2ysCT2dHE",
+   authDomain: "firemessages-f5d35.firebaseapp.com",
+   databaseURL: "https://firemessages-f5d35.firebaseio.com",
+   projectId: "firemessages-f5d35",
+   storageBucket: "firemessages-f5d35.appspot.com",
+   messagingSenderId: "620155834207"
+ };
+ firebase.initializeApp(config);
+</script>
+
+
+
+   <!--custom files-->
+   <script src="signup.js" defer></script>
+   <link rel="stylesheet" href="lib/css/style.css">
+</head>
+<body>
+
+   <!--Add your name-->
+   <h1>SIGN UP</h1>
+
+
+
+   </div>
+
+   <!--For user to input messages-->
+   <div class="userContainer">
+       <form>
+           <div class="inputContainer">
+               <div class="singleInput">
+                   <label for="username">Email:</label>
+                   <input id="username" type="text">
+                   <div class="singleInput">
+                        <label for ="username">username</label>
+                        <input id ="username"type ="text">
+               </div>
+               <div class="singleInput">
+                   <label for="message">Password:</label>
+                   <input id="message" type="password">
+               </div>
+               <div class="singleInput">
+                       <label for="confirm Password">confirm Password:</label>
+                       <input id="confirm password" type="passwordS">
+                   </div>
+        
+           </div>
+           <button id="submitButton">Submit</button>
+       </form>
+   </div>
+</body>
+</html>
